@@ -24,7 +24,7 @@ if (!quote.author)
     authorText.textContent = quote.author;
 
 }
- // Check quote lenght to determin styling
+ // Check quote lenght to determine styling
  if (quote.text.length > 80)
  {
  
@@ -45,19 +45,19 @@ quoteText.textContent = quote.text;
 async function getQuotes() 
 {
     
-    const apiUrl = 'https://jacintodesign.github.io/quotes-api/data/quotes.json';
+    const apiUrl = "https://zenquotes.io/api/quotes/";
 
     try{    
 
         const response  = await fetch(apiUrl);
         apiQuotes = await response.json();
-        //console.log(apiQuotes[13]);
+        console.log(apiQuotes);
         newQuote();
-    } catch (error)
-    {
-        // catch error code here
+        } catch (error)
+        {
+            // catch error code here
 
-    }
+        }
 
 }
 
